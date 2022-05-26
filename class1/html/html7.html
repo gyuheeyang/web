@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body link="black">
+  <!-- 첫번째 테이블 이름/아이디/비밀번호/비밀번호 재입력 -->
+  <table>
+  <tr>
+    <td ><input type= "text" placeholder = "이름" style="width: 500px;"></td>
+  </tr>
+  <tr>
+    <td><input type= "text" placeholder = "아이디" style="width: 500px;"></td>
+  </tr>
+  <tr>
+    <td><input type= "password" placeholder = "비밀번호" style="width: 500px;"></td>
+    <td><a href="http://" style="font-size:10px;">비밀번호 도움말</a></td>
+  </tr>
+  <tr>
+    <td><input type= "password" placeholder = "비밀번호 재입력" style="width: 500px;"></td>
+  </tr>
+  </table>
+<!-- 두번째 테이블 휴대폰 번호 선택 -->
+  <table>
+  <tr>
+    <td>
+      <select name = "휴대폰 번호 선택" style="width: 170px; height: 22px;" >
+        <option value="">휴대폰 번호 선택</option>
+        <option value="010">010</option>
+        <option value="011">011</option>
+    </td>
+    <td>&nbsp-&nbsp</td>
+    <td><input type="text" style="width: 135px;"></td>
+    <td>&nbsp-&nbsp</td>
+    <td><input type="text" style="width: 135px;"></td>
+  </tr>
+  </table>
+
+  <!-- 세번째 테이블 이메일 입력 -->
+  <table>
+    <tr>
+      <td><input type="text" placeholder="이메일" style="width: 162px;" ></td>
+      <td>@</td>
+      <td>
+        <select name="이메일뒷부분" id=""  style="width: 145px;">
+          <option value="">선택</option>
+          <option value="gmail.com">gmail.com</option>
+          <option value="naver.com">naver.com</option>
+        </select>
+      </td>
+    </tr>
+  </table><br><br>
+
+<!-- 네번째 테이블 전화번호 -->
+<table>
+  <tr>
+    <td>
+      <select name="지역번호" id="" style="width: 170px; height: 22px;" >
+        <option value="">전화번호</option>
+        <option value="02">02</option>
+        <option value="031">031</option>
+        <option value="032">032</option>
+      </select>
+    </td>
+    <td>-</td>
+    <td><input type="text"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"></td>
+    <td>-</td>
+    <td><input type="text"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      <select name="휴대폰 앞자리" id="" style="width: 170px; height: 22px;" >
+        <option value="">휴대폰 번호</option>
+        <option value="010">010</option>
+        <option value="011">011</option>
+      </select>
+    </td>
+    <td>-</td>
+    <td><input type="text"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"></td>
+    <td>-</td>
+    <td><input type="text"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"></td>
+    <td><input type="button" value="휴대폰 인증" style="height: 20px; font-size: 10px;"></td>
+  </tr>
+</table>
+
+
+<input type="radio" name="phone" id="" value="인증받은 휴대폰 번호를 대표번호로 사용">인증받은 휴대폰 번호를 대표번호로 사용
+<input type="radio" name="phone" id="다른 번호 등록">다른 번호 등록
+<input type="radio" name="phone" id="다음에 등록함">다음에 등록함 <br><br>
+
+<table>
+  <tr>
+    <td><input type="text"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="우편번호" style="width: 170px; height: 19px;" ></td>
+    <td><input type="button" value="주소찾기"></td>
+  </tr>
+</table><br>
+
+
+<input type="button" value="가입신청" style="background-color: red; color: white;">
+<input type="button" value="취소">
+
+</body>
+</html>
