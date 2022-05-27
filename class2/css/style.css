@@ -1,0 +1,48 @@
+div {
+  background-color: aqua;
+  height: 300px;
+}
+
+body{
+  background-color: black;
+  font-family: 'Black Han Sans', sans-serif;
+  
+}
+
+p{
+  color: blue;
+}
+
+/* class 셀렉터 클래스 선언 방식  */
+.red-text{
+  color: red;
+}
+
+.yellow-text{
+  color: yellow;
+}
+
+.big-size{
+  font-size: 50px;
+}
+
+.border{
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* id 셀렉터 - 많이 사용하지 않음 id는 중복될 수 없기 때문*/
+#div1{
+  background-color: tomato;
+}
+
+/* 링크 스타일 변경 */
+a{
+  text-decoration: none;
+  /* 언더바 삭제 */
+  color: gainsboro;
+}
+
+a:hover{
+  color: white;
+}
