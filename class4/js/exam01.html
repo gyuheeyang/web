@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1. 이름 입력
+    let name = prompt('이름을 입력해 주세요');
+
+    // == 과 ===의 쓰임이 다르다
+    // 타입까지 비교하고 싶을 때 ===을 사용하면 된다
+    
+    // 2. 만약 이름이 입력이 되지 않았다면 입력해달라고 다시 물어보기 
+    if (name === '' ){
+      name = prompt('입력해주세요');
+    }
+    // 3. 이름 띄우기
+    console.log(name);
+    alert(name + "님 안녕하세요!")
+  </script>
+</body>
+</html>
