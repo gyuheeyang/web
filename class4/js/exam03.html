@@ -24,9 +24,7 @@
     let text = prompt('텍스트 값을 입력해 주세요');
     if (text === '' ){
       text = prompt('입력해주세요');
-    }
-    
-    if (!(text === '')){
+    }else{
       document.write("<div id = 'inputText'><h1>" + text + "</h1></div>");
       document.write("<button onclick='changeRed()'>빨강</button>");
       document.write("<button onclick='changeBlue()'>파랑</button>");
