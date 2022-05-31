@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+
+    #menu1{
+      border: 1;
+      background-color: gray;
+      color: white;
+      width: 200px;
+      height: 70px;
+      text-align: center;
+      line-height: 70px;
+      position: absolute;
+      border: 1px solid black;
+    }
+    #menu2{
+      border: 1;
+      background-color: gray;
+      color: white;
+      width: 200px;
+      height: 70px;
+      text-align: center;
+      line-height: 70px;
+      position: absolute;
+      left: 300px;
+      border: 1px solid black;
+    }
+    #menu3{
+      border: 1;
+      background-color: gray;
+      color: white;
+      width: 200px;
+      height: 70px;
+      text-align: center;
+      line-height: 70px;
+      position: absolute;
+      left: 600px;
+      border: 1px solid black;
+    }
+
+  </style>
+
+
+    <div id = "menu1" onclick="changeStyle1()">html</div>
+    <div id = "menu2" onclick="changeStyle2()">css</div>
+    <div id = "menu3" onclick="changeStyle3()">javascript</div>
+
+  <script>
+    function changeStyle1(){
+      let $menu1 = document.getElementById('menu1');
+      $menu1.style.color = "black";
+      $menu1.style.backgroundColor = "white";
+
+      let $menu2 = document.getElementById('menu2');
+      $menu2.style.color = "white";
+      $menu2.style.backgroundColor = "gray";
+
+      let $menu3 = document.getElementById('menu3');
+      $menu3.style.color = "white";
+      $menu3.style.backgroundColor = "gray";
+
+    }
+
+    function changeStyle2(){
+      let $menu2 = document.getElementById('menu2');
+      $menu2.style.color = "black";
+      $menu2.style.backgroundColor = "white";
+
+      let $menu1 = document.getElementById('menu1');
+      $menu1.style.color = "white";
+      $menu1.style.backgroundColor = "gray";
+
+      let $menu3 = document.getElementById('menu3');
+      $menu3.style.color = "white";
+      $menu3.style.backgroundColor = "gray";
+    }
+
+    function changeStyle3(){
+      let $menu3 = document.getElementById('menu3');
+      $menu3.style.color = "black";
+      $menu3.style.backgroundColor = "white";
+
+      let $menu1 = document.getElementById('menu1');
+      $menu1.style.color = "white";
+      $menu1.style.backgroundColor = "gray";
+
+      let $menu2 = document.getElementById('menu2');
+      $menu2.style.color = "white";
+      $menu2.style.backgroundColor = "gray";
+    }
+
+  </script>
+</body>
+</html>

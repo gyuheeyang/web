@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<center>
+<body>
+  <style>
+    .red{
+      color: red;
+    }
+    .blue{
+      color: blue;
+    }
+    .green{
+      color: green;
+    }
+
+  </style>
+  <script>
+    let text = prompt('텍스트 값을 입력해 주세요');
+    if (text === '' ){
+      text = prompt('입력해주세요');
+    }
+    
+    if (!(text === '')){
+      document.write("<div id = 'inputText'><h1>" + text + "</h1></div>");
+      document.write("<button onclick='changeRed()'>빨강</button>");
+      document.write("<button onclick='changeBlue()'>파랑</button>");
+      document.write("<button onclick='changeGreen()'>초록</button>");
+    }
+
+    function changeRed(){
+      alert('빨간색으로 변경됩니다');
+      let $inputText = document.getElementById('inputText');
+      $inputText.className = 'red';
+    }
+    function changeBlue(){
+      alert('파란색으로 변경됩니다');
+      let $inputText = document.getElementById('inputText');
+      $inputText.className = 'blue';
+    }
+    function changeGreen(){
+      alert('초록색으로 변경됩니다');
+      let $inputText = document.getElementById('inputText');
+      $inputText.className = 'green';
+    }
+  </script>
+
+
+</body>
+</center>
+</html>
