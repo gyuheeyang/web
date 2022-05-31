@@ -1,0 +1,44 @@
+body{
+  font-family: 'Changa One', cursive;
+  font-size: 80px;
+  letter-spacing :2px; 
+  background-color: #afcfa9;
+  background-attachment: fixed;  
+  background-size: cover;
+  color: white;
+}
+
+a{
+  text-decoration-line: none;
+  display: inline-block; 
+  color: white;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a.star{
+  position: absolute;
+  width: auto;
+  height: 50px;
+
+  top: 0px;
+}
+
+/*크기 설정 1.0 기본크기*/
+
+a:hover { color: white; 
+
+  -webkit-transform: scale(1.1,1.1);
+
+  -moz-transform: scale(1.1,1.1);
+
+  -o-transform: scale(1.1,1.1);
+
+  -ms-transform: scale(1.1,1.1);
+
+  transform: scale(1.1,1.1);
+
+}
