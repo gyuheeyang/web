@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <style>
+    .container {
+      width: 250px;
+    }
+
+    .title {
+      color: white;
+      background-color: #455C9F;
+      height: 40px;
+      padding: 5px 10px 5px;
+      line-height: 40px;
+    }
+
+    .text-box {
+      background-color: #E6E7EA;
+      padding: 15px 10px;
+    }
+
+    .text {
+      background-color: white;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+    }
+
+    .insert {
+      margin: 10px;
+    }
+  </style>
+  <script>
+    $(function () {
+      let name = '';
+      let content = '';
+      $(".insert").click('click', function () {
+        name = prompt('이름을 입력하세요');
+        content = prompt('내용을 입력하세요');
+        $('.text-box').append(`<div class="text"><b>${name}</b> ${content}</div>`);
+      })
+    });
+  </script>
+
+  <div class="container">
+    <div class="title">
+      기사 등록하기
+    </div>
+    <div class="text-box">
+      <div class="text">
+        <b>박지성</b> SBS에서 월드컵 보세요!
+      </div>
+    </div>
+  </div>
+
+  <button class="insert"> 등록하기 </button>
+
+
+</body>
+
+</html> 
