@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <style>
+    table,
+    tr,
+    th,
+    td {
+      border: 1px black solid;
+    }
+
+    table {
+      width: 600px;
+    }
+  </style>
+  <table>
+    <tr>
+      <th>
+        <input type="checkbox" name="all" id="all" >확인
+      </th>
+      <th>제목</th>
+      <th>글쓴시간</th>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk" class = "del-chk" id="chk1" value="1111"></td>
+      <td>1111</td>
+      <td>11:11:11</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"  class = "del-chk" id="chk2" value="2222"></td>
+      <td>2222</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"  class = "del-chk" id="chk3" value="3333"></td>
+      <td>3333</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"  class = "del-chk" id="chk4" value="4444"></td>
+      <td>4444</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"  class = "del-chk" id="chk5" value="5555"></td>
+      <td>5555</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"  class = "del-chk" id="chk6" value="6666"></td>
+      <td>6666</td>
+      <td></td>
+    </tr>
+  </table>
+
+  <div>
+    <input id="log_button" type="button" value="로그">
+  </div>
+
+  <script>
+    // $('#log_button').val();  // value 값 읽기
+    // $('#log_button').val('어쩌구');  // value 에 값 쓰기
+    $(document).on('click','#all', function(){
+      if ($('#all').is(':checked')){
+        $('.del-chk').prop('checked',true);
+      }else{
+        $('.del-chk').prop('checked',false);
+      }
+    });
+
+
+    $('#log_button').click(function () {
+      // input 태그 중에 checkbox 타입 중에 name 이 chk 인 것만 골라라
+      let $checkBoxes = $('input:checkbox[name=chk]');
+      console.log(`체크박스 수 : ${$checkBoxes.length}`);
+
+      // 체크 된 것만 골라라
+      let checkedboxs = $('input:checkbox[name=chk]:checked');
+      console.log(`체크된 박스 수 : ${checkedboxs.length}`);
+      console.log(`체크된 박스 값 : ${checkedboxs.val()}`);
+
+
+      let array = new Array();
+      for (let i = 0 ; i < 6; i++){
+        array.push(if ($('input:checkbox[name=chk]')));
+      }
+
+      console.log(array);
+
+      // 체크 된 value 값 가져오기
+      // console.log(`체크된 박스 값 : ${checkedboxs.val()}`);
+
+
+
+
+      // name이 chk 인 체크박스의 속성 checked 를 붙여라 (전체 선택)
+      // $('input[name=chk]:checkbox').prop('checked', true);
+
+      // 체크된 것이 있는지?
+      if ($('input:checkbox[name=chk]:checked').length <1) {
+        alert("1개 이상 체크해주세요");
+      }
+
+
+
+
+
+
+      // 내부 순환
+      // let checkedSize = 0;
+      // $('input[name=chk]:checkbox').each(function () {
+      //   console.log('!!!');
+      //   console.log(this);
+      //   // this.checked = true;
+      //   console.log($(this));
+      //   // $(this).prop('checked', true);
+
+      //   // 개별 체크
+      //   if ($(this).is(':checked')) {
+      //     checkedSize++;
+      //     console.log(checkedSize);
+      //   }
+      // });
+
+
+
+    });
+  </script>
+</body>
+
+</html>
