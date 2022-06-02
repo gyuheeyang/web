@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <!-- 용량 매우 큼 그래서 slim minified 사용가능 -->
+</head>
+<body>
+  <style>
+    .big-text {
+      font-size: xx-large;
+    }
+
+    .color-red {
+      color: red;
+    }
+  </style>
+
+
+
+
+  <!-- jquery의 시작 $로 시작 -->
+  <script>
+    $(function(){
+      // onload와 동일
+      console.log('onLoad');
+
+      // 기존에 했던 js 방식
+      $jsTitle = document.getElementById('title');
+      console.log($jsTitle);
+
+      // 기본 이벤트 연결
+      document.getElementById('button1').addEventListener('click',function(){
+        console.log('클릭1!!!!');
+      });
+
+      // jquery방식 무조건 jquery 객체 리턴
+      $title = $('#title');   // id니까 #
+      console.log($title);
+
+      // jquery방식의 이벤트 연결
+      // 1번째
+      $('#button1').on('click',function(){
+        console.log('jquery 클릭 1!!!!');
+      });
+
+      // 2번째
+      $('#button1').click(function(){
+        console.log('jquery(2) 클릭 1!!!!');
+      });
+
+      // 메서드 체인
+      $('#button2').click(function(){
+        console.log('jquery클릭 2');
+      }).mouseover(function(){
+        console.log('jquery 마우스오버 2');
+      }).mouseleave(function(){
+        console.log('jquery 마우스 떠나기2');
+      });
+
+      $('#button3').click(function(){
+        $('#text').text('<b>b태그</b>');
+      });
+
+
+      $('#button4').click(function(){
+        $('#text2').append('<b>b태그</b>');
+      });
+
+
+      $('#text3').mouseover(function(){
+        console.log(this); // tag 정보 
+        console.log($(this));
+
+        //속성 변경
+        $(this).attr('class', 'color-red');
+
+        //css 변경
+        $(this).css('color', 'red')
+      });
+    });
+  </script>
+
+
+
+  <div id="title">title</div>
+  <button id="button1" >클릭1</button>
+  <button id="button2" >클릭2</button>
+
+  <div id="text">여기</div>
+  <button id="button3" >클릭3</button>
+
+  <div id="text2">여기</div>
+  <button id="button4" >클릭4</button>
+
+  <div class="big-text">big text</div>
+</body>
+</html>
