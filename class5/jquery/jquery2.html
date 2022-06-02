@@ -87,21 +87,11 @@
       // 체크 된 것만 골라라
       let checkedboxs = $('input:checkbox[name=chk]:checked');
       console.log(`체크된 박스 수 : ${checkedboxs.length}`);
-      console.log(`체크된 박스 값 : ${checkedboxs.val()}`);
-
-
-      let array = new Array();
-      for (let i = 0 ; i < 6; i++){
-        array.push(if ($('input:checkbox[name=chk]')));
-      }
-
-      console.log(array);
 
       // 체크 된 value 값 가져오기
-      // console.log(`체크된 박스 값 : ${checkedboxs.val()}`);
-
-
-
+      $("input[name='chk']:checked").each(function(e){
+        console.log(`체크된 박스의 값: ${$(this).val()}`)
+      });
 
       // name이 chk 인 체크박스의 속성 checked 를 붙여라 (전체 선택)
       // $('input[name=chk]:checkbox').prop('checked', true);
