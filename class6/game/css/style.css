@@ -1,0 +1,51 @@
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  border: 1px black solid;
+  width: 1200px;
+  height: 600px;
+  position: relative;
+}
+
+#mario {
+  width: 200px;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
+#goomba {
+  width: 100px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+#killer {
+  position: absolute;
+  width: 100px;
+  left: 220px;
+  bottom: 70px;
+  transform: scaleX(-1);
+  display: none;
+}
+
+.background {
+  position: absolute;
+  background-image: url('../assets/bg.png');
+  width: 200%;
+  height: 100%;
+  animation: slide 30s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-1960px, 0);
+  }
+}
