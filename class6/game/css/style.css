@@ -39,10 +39,10 @@ body {
   position: absolute;
   width: 1900px;
   height: 600px;
-  background-color: black;
+  background-color: white;
   line-height: 200px;
   text-align: center;
-  color: red;
+  color: black;
   font-size: large;
 }
 
@@ -50,10 +50,10 @@ body {
   position: absolute;
   width: 1900px;
   height: 600px;
-  background-color: black;
+  background-color: white;
   line-height: 200px;
   text-align: center;
-  color: white;
+  color: black;
   font-size: large;
 }
 
