@@ -3,14 +3,17 @@ body {
 }
 
 .container {
-  border: 1px black solid;
   width: 1200px;
   height: 600px;
   position: relative;
 }
 
+#score {
+  position: relative;
+} 
+
 #mario {
-  width: 200px;
+  width: 100px;
   position: absolute;
   bottom: 50px;
   left: 50px;
@@ -32,20 +35,42 @@ body {
   display: none;
 }
 
+#gameover {
+  position: absolute;
+  width: 1900px;
+  height: 600px;
+  background-color: black;
+  line-height: 200px;
+  text-align: center;
+  color: red;
+  font-size: large;
+}
+
+#start {
+  position: absolute;
+  width: 1900px;
+  height: 600px;
+  background-color: black;
+  line-height: 200px;
+  text-align: center;
+  color: white;
+  font-size: large;
+}
+
 .background {
   position: absolute;
-  background-image: url('../assets/bg.png');
-  width: 200%;
+  background-image: url('../assets/bg.jpg');
+  width: 300%; 
   height: 100%;
-  animation: slide 30s linear infinite;
+  animation: slide 3s linear infinite;
 }
 
 @keyframes slide {
   from {
-    transform: translate(0, 0);
+    left: 0px;
   }
 
   to {
-    transform: translate(-1960px, 0);
+    left: -107%;
   }
 }
