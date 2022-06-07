@@ -59,7 +59,7 @@ body {
 
 .background {
   position: absolute;
-  background-image: url('../assets/bg.jpg');
+  background-image: url('../assets/bg.png');
   width: 300%; 
   height: 100%;
   animation: slide 3s linear infinite;
