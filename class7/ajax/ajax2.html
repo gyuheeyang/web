@@ -11,8 +11,14 @@
 <body>
   <script>
     $(function(){
-      $('#get_date_button').click(function(){
-        $('#demo').load('ajax_info.txt');
+      $('#get_data_button').click(function () {
+        // GET 방식
+        // $('#demo').load('ajax_info.txt');
+        $.getJSON('people.json', function (json) {
+          console.log(json);
+          // $('#demo').html(JSON.stringify(json));
+          $('#demo').html(`${json.name} : ${json.skill}`);
+        });
       });
     });
   </script>
