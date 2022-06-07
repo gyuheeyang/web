@@ -13,8 +13,10 @@
       /* Add shadows to create the "card" effect */
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
-      width: 200px;
+      width: 330px;
+      height: 550px;
       margin: 10px;
+      float: left;
     }
 
     /* On mouse-over, add a deeper shadow */
@@ -30,41 +32,34 @@
 </head>
 <body onload="loadData()">
   <script>
-    // function moveCommentsPage(postId){
-    //   console.log(postId);
-    //   // 페이지 이동하는 코드 
-    //   document.location.href = `exam4_comments.html?id=${postId}`;
-    // }
-
-    const base_url = "https://image.tmdb.org/t/p/w500";
-
+    function moveMovieDetail(id){
+      console.log(id);
+     // 페이지 이동하는 코드 
+      document.location.href = `exam5_movie.html?id=${id}`;
+    }
 
     function loadData() {
       fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=a64533e7ece6c72731da47c9c8bc691f&language=ko-KR&page=1')
         .then(response => response.json())
         .then(jsonArray => {
-          let $list = $('#list');
+          let movies= jsonArray.results;
           // for문과 같은 역할을 한다
-          jsonArray.forEach((data) => {
-            $list.append(`<div class="card">
-              <img src=https://image.tmdb.org/t/p/w500${data.poster_path}" style="width:100%">
-              <div class="container">
-              <h4><b>${data.title}</b></h4>
-              </div>
-            </div>`);
+          movies.forEach((data) => {
+            $('#list').append(`<div class="card" onClick="moveMovieDetail(${data.id})">
+                <div class="container">
+                <p><img src = "https://image.tmdb.org/t/p/w500${data.poster_path}" width = "300px"></p>
+                <h4><b><p align = "center">${data.title}</p></b></h4>
+          </div>
+        </div>`);
           })
           console.log(jsonArray);
         });
     } 
   </script>
+  </script>
 
 <div id="list">
-  <!-- <div class="card">
-    <div class="container">
-      <h4><b>John Doe</b></h4>
-      <p>Architect & Engineer</p>
-    </div>
-  </div> -->
+
 </div>
 
 </body>

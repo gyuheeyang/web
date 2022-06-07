@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style>
+    .container{
+      position: absolute;
+    }
+    .release_date{
+      position: absolute;
+      left: 450px;
+      top: 80px;
+    }
+    .overview{
+      position: absolute;
+      top: 700px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    $(function(){
+      const queryString = window.location.search;     //url 뒤 ? 부터 (ex: '?id=1')
+      const urlParams = new URLSearchParams(queryString);
+      const id = urlParams.get('id');
+      console.log(id);
+
+      loadData(id);
+    });
+
+    function loadData(id) {
+              // https://api.themoviedb.org/3/movie/752623?api_key=a64533e7ece6c72731da47c9c8bc691f&language=ko-KR
+      fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=a64533e7ece6c72731da47c9c8bc691f&language=ko-KR&page=1`)
+      .then(response => response.json())
+      .then(json => {
+          $('#list').append(`
+                <div class="container">
+                <h1><b>${json.title}</b></h1>
+                <p><img src = "https://image.tmdb.org/t/p/w500${json.poster_path}" width = "400px"></p>
+                </div>
+                <div class= "release_date"><p>개봉일: ${json.release_date}</p>
+                <p>☆${json.vote_average}</p>
+                <p>✓${json.vote_count}</p>
+                <div class = "overview"><p>${json.overview}</p></div>
+        </div>`);
+          });
+    } 
+  </script>
+<div id="list">
+
+</div>
+</body>
+</html>
