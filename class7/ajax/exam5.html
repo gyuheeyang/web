@@ -17,6 +17,7 @@
       height: 550px;
       margin: 10px;
       float: left;
+      border-radius: 10px;
     }
 
     /* On mouse-over, add a deeper shadow */
@@ -27,7 +28,13 @@
     /* Add some padding inside the card container */
     .container {
       padding: 2px 16px;
-}
+
+  }
+
+  .poster {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body onload="loadData()">
@@ -47,7 +54,7 @@
           movies.forEach((data) => {
             $('#list').append(`<div class="card" onClick="moveMovieDetail(${data.id})">
                 <div class="container">
-                <p><img src = "https://image.tmdb.org/t/p/w500${data.poster_path}" width = "300px"></p>
+                <p><img class = "poster" src = "https://image.tmdb.org/t/p/w500${data.poster_path}" width = "300px" ></p>
                 <h4><b><p align = "center">${data.title}</p></b></h4>
           </div>
         </div>`);
