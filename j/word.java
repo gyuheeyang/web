@@ -20,14 +20,13 @@ public class Word {
 
 
 	public boolean isConsinant(int i) {
-		boolean result = false;
+		boolean result = true;
 		if ("aieou".contains(letters.substring(i, i+1)) == false) {
-			result = true;
-		}else {
-			result =false;
+			result = false;
 		}
 		return result;
 	}
+	
 	
 
 
