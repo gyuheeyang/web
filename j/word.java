@@ -21,7 +21,7 @@ public class Word {
 
 	public boolean isConsinant(int i) {
 		boolean result = true;
-		if ("aieou".contains(letters.substring(i, i+1)) == false) {
+		if ("aieou".contains(letters.substring(i, i+1)) == true) {
 			result = false;
 		}
 		return result;
