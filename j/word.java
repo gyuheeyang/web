@@ -18,4 +18,17 @@ public class Word {
 		return letters.substring(i, i + 1).equals("a") || letters.substring(i, i + 1).equals("i") || letters.substring(i, i + 1).equals("u") || letters.substring(i, i + 1).equals("e") || letters.substring(i, i + 1).equals("o");	
 	}
 
+
+	public boolean isConsinant(int i) {
+		boolean result = false;
+		if ("aieou".contains(letters.substring(i, i+1)) == false) {
+			result = true;
+		}else {
+			result =false;
+		}
+		return result;
+	}
+	
+
+
 }
